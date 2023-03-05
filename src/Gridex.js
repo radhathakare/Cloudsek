@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import { Draggable } from 'drag-react';
+
 
 
 
@@ -108,10 +108,6 @@ function Gridex() {
 
     return recommendedHouse;
   };
-  const handleRecommendHouseClick = () => {
-    const recommendedHouse = recommendHouse();
-    console.log(`Recommended house: ${recommendedHouse}`);
-  };
 
   return (
     <div className="Container">
@@ -127,18 +123,18 @@ function Gridex() {
           {grid.map((row, rowIndex) => (
             <tr key={rowIndex}>
               {row.map((value, colIndex) => (
-                 <div class="card"></div>
+                 
                 
-                // <td key={colIndex}>
-                //   <select value={value} onChange={(e) => handleServiceSelection(e, rowIndex, colIndex)}>
-                //     <option value=""></option>
-                //     <option value="House">House</option>
-                //     <option value="Restaurant">Restaurant</option>
-                //     <option value="Gym">Gym</option>
-                //     <option value="Hospital">Hospital</option>
-                //   </select>
+                <td key={colIndex}>
+                  <select value={value} onChange={(e) => handleServiceSelection(e, rowIndex, colIndex)}>
+                    <option value=""></option>
+                    <option value="House">House</option>
+                    <option value="Restaurant">Restaurant</option>
+                    <option value="Gym">Gym</option>
+                    <option value="Hospital">Hospital</option>
+                  </select>
                   
-                // </td>
+                </td>
                
               ))}
             </tr>
